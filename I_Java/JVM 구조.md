@@ -1,7 +1,7 @@
-## JVM 구조
+# JVM 구조
 ![](https://file.notion.so/f/s/89043600-d178-4b7c-9ed4-01dbf5473961/Untitled.png?id=20c976fa-3e61-4abf-9c0f-bdc0d18c30d3&table=block&spaceId=3a360ce2-d10d-4f64-b827-1829272f68ef&expirationTimestamp=1698213600000&signature=FCkH4w0SD8_gmaAxykk4QUbrVWWa_MtFYof0sQsiTNQ&downloadName=Untitled.png)
 
-### 1. Class Loader
+## 1. Class Loader
 
 .class 확장자를 가진 클래스 파일과 기본적인 라이브러리 클래스 파일들을 찾아 JVM 메모리 내에 탑재하는 역할
 
@@ -60,7 +60,7 @@ Symbolic Reference 값을 JVM 메모리 구성 요소인 Method Area의 런타�
 Initialization 단계에서는 클래스 파일의 코드를 읽게 된다. Java 코드에서의 class와 interface 의 값들을 지정한 값들로 초기화 및 초기화 메서드를 실행시켜준다. Class Loader 를 통한 클래스 탑재 과정이 끝나면 본격적으로 JVM 에서 클래스 파일을 구동시킬 준비가 끝나게 된다
 
 
-### 2. Execution Engine
+## 2. Execution Engine
 
 **실행 엔진(Execution Engine)** 은 메모리에 적재된 클래스(바이트 코드)들을 기계어로 변경하여 명령어(instruction) 단위로 실행
 
@@ -71,7 +71,7 @@ Initialization 단계에서는 클래스 파일의 코드를 읽게 된다. Java
 2. JIT(Just In Time)
    **컴파일 임계치**를 만족하는 코드는 JIT 컴파일러에 의해 컴파일이 수행 (컴파일은 JVM 내에 있는 메소드가 호출된 횟수, 메소드가 루프를 빠져 나오기까지 돈 횟수에 대한 카운터(counter) 두 개를 기반으로 합니다.)
 
-### 3. Runtime Data Area
+## 3. Runtime Data Area
 
 ![](https://file.notion.so/f/s/6a3b9963-a0cb-430f-a216-32add7f8d0bc/Untitled.png?id=3643c64d-f522-4c7c-b1be-249dac86964a&table=block&spaceId=3a360ce2-d10d-4f64-b827-1829272f68ef&expirationTimestamp=1698213600000&signature=5xl8EiVoU8V8aNRHphM4_meSPjbRDxTQAARs16VOZAY&downloadName=Untitled.png)
 
@@ -91,6 +91,6 @@ Initialization 단계에서는 클래스 파일의 코드를 읽게 된다. Java
 
 **`Native Method Stack`**  다른 언어(C/C++ 등)의 메소드 호출을 위해 할당되는 구역으로 언어에 맞게 Stack이 형성되는 구역이다
 
-### 4. Garbage Collector
+## 4. Garbage Collector
 
 **Garbage Collector(GC)는 힙 메모리 영역에 생성된 객체들 중에서 참조되지 않은 객체들을 탐색 후 제거하는 역할**
